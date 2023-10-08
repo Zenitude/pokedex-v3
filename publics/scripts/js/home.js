@@ -143,7 +143,8 @@ if(document.querySelector('.containerHome')) {
             });
             
             const desc = document.createElement('a');
-                desc.setAttribute('class', 'desc');
+                desc.setAttribute('class', 'flex-center')
+                desc.classList.add('desc');
                 desc.setAttribute('href', `pokemon.html?name=${pokemon.name.en}`);
 
                 const number = document.createElement('strong');

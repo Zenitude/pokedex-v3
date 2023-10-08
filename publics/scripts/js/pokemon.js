@@ -193,7 +193,8 @@ if(document.querySelector('.containerPokemon')) {
 
         // Name & Number
         const containerNameNumber = document.createElement('div');
-        containerNameNumber.setAttribute('class', 'nameAndNumber');
+        containerNameNumber.setAttribute('class', 'flex-center');
+        containerNameNumber.classList.add('nameAndNumber');
 
         const number = document.createElement('h2');
         number.setAttribute('class', 'number');
@@ -211,7 +212,8 @@ if(document.querySelector('.containerPokemon')) {
         titleSprites.innerText = 'Formes';
 
         const containerSprites = document.createElement('div');
-        containerSprites.setAttribute('class', 'sprites');
+        containerSprites.setAttribute('class', 'flex-center');
+        containerSprites.classList.add('sprites');
 
         const spriteDefault = document.createElement('img');
         spriteDefault.setAttribute('src', `${pkmn.sprites.front_default}`);
@@ -236,7 +238,8 @@ if(document.querySelector('.containerPokemon')) {
         titleTypes.innerText = 'Types';
 
         const types = document.createElement('p');
-        types.setAttribute('class', 'types');
+        types.setAttribute('class', 'flex-center');
+        types.classList.add('types');
         types.innerHTML = pkmn.types.length > 1 
         ? `<img src="${pkmn.types[0][0]}"> <img src="${pkmn.types[1][0]}">`
         : `<img src="${pkmn.types[0][0]}">`; 

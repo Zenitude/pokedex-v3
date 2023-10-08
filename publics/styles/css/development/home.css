@@ -1,27 +1,17 @@
 .container-cards {
-    padding: 20px 5px 10px 5px;
+    padding: 10px 5px;
     background: #333;
-    width: 190px;
-    height: 361px;
     border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
-    position: absolute;
-    top: 43%;
-    left: 50%;
-    transform: translate(-50%, -27.4%);
-    -webkit-transform: translate(-50%, -27.4%);
-    -moz-transform: translate(-50%, -27.4%);
-    -ms-transform: translate(-50%, -27.4%);
-    -o-transform: translate(-50%, -27.4%);
-    overflow-x: hidden;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    z-index: -1;
+    gap: 10px;
+    width: 162px;
+    height: 313px;
+    overflow-x: auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container-cards::-webkit-scrollbar {
@@ -61,6 +51,8 @@
     color: #000 ;
     font-size: 0.7rem;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 5px;
     flex-grow: 1;

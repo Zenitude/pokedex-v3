@@ -1,0 +1,211 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html, body, .container {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(45deg, #e0a352, #e43030);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    flex-wrap: wrap;
+    background: transparent;
+    position: relative;
+}
+
+.pokedex-front {
+    background: url('../../../assets/images/motismart1.png') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.pokedex {
+    width: 280px;
+    height: 575px;
+    background: url('../../../assets/images/motismart2.png') no-repeat center;
+    background-size: contain;
+    z-index: 10px;
+    position: relative;
+    filter: drop-shadow(0 0 5px #000);
+    -webkit-filter: drop-shadow(0 0 5px #000);
+}
+
+.container-cards, .pokemon {
+    padding: 10px 5px;
+    background: #333;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 162px;
+    height: 313px;
+    overflow-x: auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pokemon {
+    padding: 15px 10px;
+}
+
+:is(.container-cards, .pokemon)::-webkit-scrollbar {
+    width: 0;
+}
+
+.card {
+    border: 1px solid black;
+    width: 98%;
+    height: 50px;
+    margin: 0 auto;
+    padding-left: 5px;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: inset 0 0 7px #000;
+}
+
+.card > img {
+    z-index: 5px;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 2px #000);
+    cursor: pointer;
+}
+
+.desc {
+    padding-left: 5px;
+    text-decoration: none;
+    color: #000 ;
+    font-size: 0.7rem;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+    height: 100%;
+}
+
+/* Pokemon Page : Global */
+
+.back {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+h3 {
+    width: 100%;
+    padding: 5px 0 15px;
+}
+
+.types, .number, .name, h3, .nameAndNumber {
+    text-align: center;
+}
+
+/* Pokemon Page : Name and Number */
+
+.nameAndNumber {
+    border-top: 1px dashed #000;
+    padding: 10px 0;
+}
+
+.number {
+    width: 30%;
+    font-size: 1rem;
+}
+
+.name {
+    width: 70%;
+    font-size: 1rem;
+}
+
+/* Pokemon Page : Sprites */
+.sprites {
+    padding: 5px 0 15px;
+    flex-wrap: wrap;
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+}
+
+.sprites img{
+    width: 50%;
+    cursor: pointer;
+}
+
+/* Pokemon Page : Types */
+.types {
+    padding: 0 0 20px;
+    border-bottom: 1px dashed #000;
+    filter: drop-shadow(0 0 2px #000);
+    -webkit-filter: drop-shadow(0 0 2px #000);
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Pokemon Page : Measures */
+.measures {
+    padding: 0px 0 20px;
+    border-bottom: 1px dashed #000;
+}
+
+.measures ul {
+    list-style-position: inside;
+}
+
+/* Pokedex front */
+@media all and (min-height: 700px) {
+    .pokedex-front {
+        width: 110px;
+        height: 220px;
+    }
+}
+
+@media all and (min-height: 900px) {
+    .pokedex-front {
+        width: 150px;
+        height: 300px;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .pokedex-front {
+        width: 250px;
+        height: 650px;
+    }
+}
+
+/* Pokedex */
+@media all and (min-width: 700px) and (min-height: 601px) {
+    .pokedex {
+        width: 450px;
+        height: 775px;
+    }
+
+    .container-cards, .pokemon {
+        width: 217px;
+        height: 415px;
+    }
+
+    .desc {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .types {
+        flex-direction: row;
+    }
+}
+
